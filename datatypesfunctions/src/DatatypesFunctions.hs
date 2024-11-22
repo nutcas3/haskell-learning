@@ -16,3 +16,12 @@ not False = True
 (|||) True  False = True
 (|||) False True  = True
 (|||) False False = False
+
+loop :: a
+loop = loop
+
+
+ifthenelse :: Bool -> a -> a -> a
+ifthenelse c t e
+    | c         = t
+    | otherwise = e
